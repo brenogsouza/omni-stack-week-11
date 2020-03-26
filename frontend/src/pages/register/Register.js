@@ -19,9 +19,9 @@ const Register = () => {
     e.preventDefault()
     const data = { name, email, whatsapp, city, uf }
 
-    const response = await API.post('ong', data)
 
     try {
+      const response = await API.post('ong', data)
       alert(`Seu ID de acesso: ${response.data.id}`)
       history.push('/')
     } catch (err) {
