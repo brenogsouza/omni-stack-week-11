@@ -1,0 +1,53 @@
+.register__container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register__container .register__content {
+    width: 100%;
+    padding: 96px;
+    background-color: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register__container .register__content section {
+    width: 100%;
+    max-width: 380px;
+}
+
+.register__container .register__content section h1 {
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+
+.register__container .register__content section p {
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.register__container .register__content form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.register__container .register__content form input {
+    margin-top: 10px;
+}
+
+.register__container .register__content form .register__input-group {
+    display: flex;
+}
+
+.register__container .register__content form .register__input-group input+input {
+    margin-left: 10px;
+}
