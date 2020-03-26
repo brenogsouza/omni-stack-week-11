@@ -1,9 +1,11 @@
 import React from 'react';
+import { Login } from './pages/login';
+import './stylesheet/global.css'
 
 function App() {
   return (
 
-    <h1>Ola mundo</h1>
+    <Login />
   );
 }
 
