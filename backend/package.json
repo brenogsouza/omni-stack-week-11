@@ -12,6 +12,6 @@
         "nodemon": "2.0.2"
     },
     "scripts": {
-        "dev": "nodemon src/index.js"
+        "dev": "nodemon src/server.js"
     }
 }

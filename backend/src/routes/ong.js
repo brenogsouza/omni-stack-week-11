@@ -3,8 +3,10 @@ const OngController = require('../controllers/OngController')
 
 const routes = express.Router()
 
-routes.get('/ongs', OngController.index)
+routes.get('/ong', OngController.index)
 
-routes.post('/ongs', OngController.create)
+routes.post('/ong', OngController.create)
 
-module.exports = routes
+const ongRoute = routes
+
+module.exports = ongRoute
