@@ -1,10 +1,12 @@
 const express = require('express')
 
 const app = express();
+app.use(express.json())
 
-app.get('/', (req, res) => {
+app.post('/users', (req, res) => {
   return res.json({
-    message: 'ola mundo'
+    evento: "teste",
+    aluno: "Breno"
   })
 })
 
