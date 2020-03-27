@@ -10,11 +10,13 @@ import api from '../../services/api';
 
 const Incident = () => {
   const [incidents, setIncidents] = useState([])
+  const [total, setTotal] = useState(0)
 
   async function loadIncidents() {
     const res = await api.get('incident');
 
     setIncidents(res.data)
+    setTotal(res.headers['x-total-count'])
 
   }
 
@@ -24,8 +26,8 @@ const Incident = () => {
 
   const navigation = useNavigation()
 
-  const navigationToDetail = () => {
-    navigation.navigate('Detail')
+  const navigationToDetail = (incident) => {
+    navigation.navigate('Detail', { incident })
   }
 
   return (
@@ -33,7 +35,7 @@ const Incident = () => {
       <View style={styles.header}>
         <Image source={logoImg} />
         <Text style={styles.headerText}>
-          Total de <Text style={styles.headerTextBold}>0 casos</Text>.
+          Total de <Text style={styles.headerTextBold}>{total} caso(s)</Text>.
         </Text>
       </View>
       <Text style={styles.title}>Bem-vindo!</Text>
@@ -53,9 +55,15 @@ const Incident = () => {
             <Text style={styles.incidentValue}>{incident.title}</Text>
 
             <Text style={styles.incidentProperty}>VALOR:</Text>
-            <Text style={styles.incidentValue}>{incident.value}</Text>
+            <Text style={styles.incidentValue}>{
+              Intl.NumberFormat('pt-BR',
+                {
+                  style: "currency",
+                  currency: 'BRL'
+                }).format(incident.value)}
+            </Text>
 
-            <TouchableOpacity style={styles.detailsButton} onPress={navigationToDetail}>
+            <TouchableOpacity style={styles.detailsButton} onPress={() => navigationToDetail(incident)}>
               <Text style={styles.detailsButtonText}>Ver mais detalhes</Text>
               <Feather name="arrow-right" size={16} color="#e02041" />
             </TouchableOpacity>
