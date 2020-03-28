@@ -34,7 +34,7 @@ Connecting ONGs who needs help with people or other organizations who wants help
 ### List all cases and choose one to BE THE HERO, contact the ONG by using either whatsapp or e-mail
 
 <p align="center">
-    <img src="mobile/assets/app.png">
+    <img src="/assets/app.png">
 </p>
 
 <br>
