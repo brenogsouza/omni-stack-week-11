@@ -98,11 +98,6 @@ npm install || yarn install
 
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Omni-Stack-11&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fbrenogsouza%2Fomni-stack-week-11%2Fmaster%2FOmni-Stack-11.json)
 
-## teste
-
-<a href="https://insomnia.rest/run/?label=Omni-Stack-11&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fbrenogsouza%2Fomni-stack-week-11%2Fmaster%2FOmni-Stack-11.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
-<br>
-
 <blockquote alt="[ignore]">
 <p>
 This project comes from Rocketseat's omnistack week #11, and it is only for study purposes. The brand, logo and name are non professional.
