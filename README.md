@@ -94,8 +94,7 @@ npm install || yarn install
 
 <br>
 
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Omni-Stack-11&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fbrenogsouza%2Fomni-stack-week-11%2Fmaster%2FOmni-Stack-11.json)
-
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Be%20The%20Hero%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fbrenogsouza%2Fomni-stack-week-11%2Fmaster%2FOmni-Stack-11.json)
 <br>
 
 <blockquote alt="[ignore]">
