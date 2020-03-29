@@ -4,6 +4,8 @@ import './style.css'
 import { FiArrowLeft } from 'react-icons/fi/'
 import { Logo } from "../../assets";
 import { Link, useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import { API } from '../../services'
 
 const Register = () => {
@@ -13,6 +15,7 @@ const Register = () => {
   const [city, setCity] = useState('')
   const [uf, setUf] = useState('')
 
+  const MySwal = withReactContent(Swal);
   const history = useHistory()
 
   const handleRegister = async e => {
@@ -22,10 +25,21 @@ const Register = () => {
 
     try {
       const response = await API.post('ong', data)
-      alert(`Seu ID de acesso: ${response.data.id}`)
-      history.push('/')
+      MySwal.fire({
+        icon: 'success',
+        title: 'Sucesso',
+        text: `Seu ID de acesso é: ${response.data.id}`,
+      }).then(() => {
+
+        history.push('/')
+      })
+
     } catch (err) {
-      alert('Erro no cadastro tente novamente.')
+      MySwal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Erro no cadastro tente novamente.',
+      })
     }
   }
 
